@@ -8,24 +8,73 @@
   body { font-family: system-ui, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 16px; line-height: 1.6; color: #1d1d1f; background: #fff; }
   h2 { margin-top: 32px; }
   a { color: #0b57d0; }
+  li { margin: 4px 0; }
 </style>
 </head>
 <body>
 <h1>Política de privacidad · Privacy policy</h1>
-<p>HanDy Analitica · Última actualización / Last updated: 2026-11-15</p>
+<p>HanDy Analitica · Versión 2 · Última actualización / Last updated: 2026-11-16</p>
 
 <h2>Español</h2>
-<p><strong>Qué es.</strong> HanDy Analitica es una herramienta privada del equipo del canal de YouTube HanDy. Analiza los datos del propio canal para decidir qué videos publicar. No es un servicio público ni se ofrece a terceros.</p>
-<p><strong>Qué datos usa.</strong> Con tu permiso, y siempre en <strong>solo lectura</strong>, accede mediante los Servicios de API de YouTube (YouTube Data API, YouTube Analytics API y YouTube Reporting API) a la información del canal autorizado: lista de videos y sus metadatos, estadísticas (vistas, tiempo de visualización, retención, suscriptores), ingresos estimados y fuentes de tráfico. No accede a tu correo, contraseñas, mensajes ni a otros servicios de Google.</p>
-<p><strong>Cómo se usa y dónde se guarda.</strong> Los datos se guardan solo en el computador del equipo del canal y se usan únicamente para analizar el rendimiento del canal y generar recomendaciones de contenido. Para generar esas recomendaciones, parte de los datos puede procesarse con un servicio de inteligencia artificial (Claude API de Anthropic). Los datos no se venden ni se comparten con nadie más ni se usan para publicidad.</p>
-<p><strong>Cómo quitar el permiso.</strong> Puedes revocar el acceso cuando quieras en <a href="https://myaccount.google.com/connections">https://myaccount.google.com/connections</a>. Al revocarlo se dejan de recibir datos y los ya guardados se borran si lo pides.</p>
+<p><strong>Qué es.</strong> HanDy Analitica es una herramienta privada del equipo del canal de YouTube HanDy: un programa en el computador del gestor del canal y una web privada, «¿Qué subo hoy?». Analiza los datos del propio canal para decidir qué videos publicar. No es un servicio público ni se ofrece a terceros.</p>
+<p><strong>Qué datos usa.</strong> Con el permiso del dueño del canal, y siempre en <strong>solo lectura</strong>, accede mediante los Servicios de API de YouTube (YouTube Data API, YouTube Analytics API y YouTube Reporting API) a la información del canal autorizado: lista de videos y sus metadatos, estadísticas (vistas, tiempo de visualización, retención, suscriptores), ingresos estimados y fuentes de tráfico. También usa datos públicos de otros canales y webs (por ejemplo, videos públicos de YouTube y mods de GameBanana) para el radar de novedades. No accede a tu correo, contraseñas, mensajes ni a otros servicios de Google.</p>
+<p><strong>Dónde se guarda.</strong></p>
+<ul>
+  <li><strong>En el computador del gestor del canal</strong>: los datos descargados del canal y los informes.</li>
+  <li><strong>En la web privada «¿Qué subo hoy?»</strong>, alojada en Cloudflare (Cloudflare Workers, con sus bases de datos Workers KV y D1): solo un resumen diario ya agregado (por ejemplo, los mejores videos, el RPM por duración o país y las fuentes de tráfico), el radar de novedades y un manual del canal. Nunca se suben los datos diarios en bruto, los comentarios, los permisos de Google ni contraseñas.</li>
+</ul>
+<p><strong>Quién lo ve.</strong> La web no tiene cuentas públicas: solo entran dos personas, el dueño del canal y su gestor, cada una con una clave personal. Al entrar, la web guarda una cookie técnica de sesión (<code>__Host-handy</code>) que dura 30 días y solo sirve para recordar que ya pusiste tu clave; no se usa para rastreo ni analítica. El gestor solo ve los datos del canal (vistas, ingresos estimados y RPM) después de que el dueño lo autorice expresamente pulsando «Autorizo», y el dueño puede retirar esa autorización cuando quiera desde la propia web. Los datos no se venden, no se usan para publicidad y no se comparten con nadie más.</p>
+<p><strong>Quién procesa los datos.</strong></p>
+<ul>
+  <li><strong>Cloudflare</strong> aloja la web. Para proteger la entrada, la web anota durante 1 día los intentos fallidos de entrar, y guarda la dirección IP solo de forma cifrada (hash).</li>
+  <li><strong>Anthropic (Claude API)</strong> puede procesar parte de los datos para generar las recomendaciones de video. Según su política, no usa los datos enviados por su API para entrenar sus modelos sin permiso expreso. Las búsquedas en internet que haga para investigar no llevan datos del canal.</li>
+</ul>
+<p><strong>Métricas calculadas.</strong> El RPM, las notas del radar y los rangos de vistas o ingresos esperados son estimaciones de HanDy Analitica, no datos de YouTube, y la web lo indica junto a cada cifra.</p>
+<p><strong>Cuánto se guarda.</strong></p>
+<ul>
+  <li>Resumen de los datos del canal en la web: 28 días; se renueva solo mientras el permiso de YouTube siga funcionando.</li>
+  <li>Datos públicos de otros canales: 7 días en la web y nunca más de 27 días desde que se descargaron (en el computador, 28 días).</li>
+  <li>Manual del canal en la web: 27 días desde que se escribió. Textos de las recomendaciones de la IA: 25 días.</li>
+  <li>Registro de entradas y subidas: 90 días. Sesiones abiertas: 30 días. Intentos fallidos de entrar: 1 día. Registros técnicos de la web: 7 días.</li>
+  <li>Copias automáticas de la base de datos de la web: como máximo 30 días, y no contienen datos de YouTube.</li>
+</ul>
+<p><strong>Cómo borrar los datos o quitar el permiso.</strong></p>
+<ul>
+  <li>El dueño puede pulsar «Borrar todos los datos del canal» en la web: la web los borra al momento y el computador del gestor en su siguiente pasada diaria (como máximo en 7 días), y se retira el permiso de YouTube.</li>
+  <li>También puedes quitar el permiso cuando quieras en <a href="https://myaccount.google.com/connections">https://myaccount.google.com/connections</a>. Si el permiso deja de funcionar, la web y el computador borran los datos del canal como máximo a los 27 días (siempre antes de 30).</li>
+</ul>
+<p><strong>Contacto.</strong> Para cualquier duda o petición sobre estos datos, abre una consulta en <a href="https://github.com/angelarias0416-collab/handy-analitica/issues">https://github.com/angelarias0416-collab/handy-analitica/issues</a> (es pública: no escribas ahí datos privados). El dueño del canal también puede pedir el borrado desde la propia web, como se explica arriba.</p>
 <p>Esta herramienta usa los Servicios de API de YouTube. Al usarla aceptas las <a href="https://www.youtube.com/t/terms">Condiciones del Servicio de YouTube</a>, y se aplica la <a href="https://policies.google.com/privacy">Política de Privacidad de Google</a>.</p>
 
 <h2>English</h2>
-<p><strong>What it is.</strong> HanDy Analitica is a private tool of the HanDy YouTube channel team. It analyzes the channel's own data to decide what videos to publish. It is not a public service and is not offered to third parties.</p>
-<p><strong>Data accessed.</strong> With your permission, and always <strong>read-only</strong>, it uses the YouTube API Services (YouTube Data API, YouTube Analytics API and YouTube Reporting API) to access the authorized channel's information: video list and metadata, statistics (views, watch time, retention, subscribers), estimated revenue and traffic sources. It does not access your email, passwords, messages or other Google services.</p>
-<p><strong>Use and storage.</strong> Data is stored only on the channel team's own computer and used only to analyze channel performance and produce content recommendations. To produce those recommendations, part of the data may be processed by an AI service (Anthropic's Claude API). Data is never sold, shared with anyone else, or used for advertising.</p>
-<p><strong>Revoking access.</strong> You can revoke access at any time at <a href="https://myaccount.google.com/connections">https://myaccount.google.com/connections</a>. After revocation no more data is received, and stored data is deleted on request.</p>
+<p><strong>What it is.</strong> HanDy Analitica is a private tool of the HanDy YouTube channel team: a program on the channel manager's computer and a private website, «¿Qué subo hoy?». It analyzes the channel's own data to decide what videos to publish. It is not a public service and is not offered to third parties.</p>
+<p><strong>Data accessed.</strong> With the channel owner's permission, and always <strong>read-only</strong>, it uses the YouTube API Services (YouTube Data API, YouTube Analytics API and YouTube Reporting API) to access the authorized channel's information: video list and metadata, statistics (views, watch time, retention, subscribers), estimated revenue and traffic sources. It also uses public data from other channels and sites (for example, public YouTube videos and GameBanana mods) for its news radar. It does not access your email, passwords, messages or other Google services.</p>
+<p><strong>Where it is stored.</strong></p>
+<ul>
+  <li><strong>On the channel manager's computer</strong>: the downloaded channel data and the reports.</li>
+  <li><strong>On the private website «¿Qué subo hoy?»</strong>, hosted on Cloudflare (Cloudflare Workers with its Workers KV and D1 databases): only an already aggregated daily summary (for example, top videos, RPM by length or country and traffic sources), the news radar and a channel handbook. Raw daily data, comments, Google permissions and passwords are never uploaded.</li>
+</ul>
+<p><strong>Who can see it.</strong> The website has no public accounts: only two people can sign in, the channel owner and the channel manager, each with a personal key. After signing in, the website stores a technical session cookie (<code>__Host-handy</code>) that lasts 30 days and only remembers that you already entered your key; it is not used for tracking or analytics. The manager only sees the channel data (views, estimated revenue and RPM) after the owner expressly authorizes it by pressing «Autorizo», and the owner can withdraw that authorization at any time from the website. Data is never sold, used for advertising, or shared with anyone else.</p>
+<p><strong>Who processes the data.</strong></p>
+<ul>
+  <li><strong>Cloudflare</strong> hosts the website. To protect sign-in, the website keeps failed sign-in attempts for 1 day, storing the IP address only in hashed form.</li>
+  <li><strong>Anthropic (Claude API)</strong> may process part of the data to produce video recommendations. According to its policy, it does not use data sent through its API to train its models without express permission. Any web searches it runs for research never include channel data.</li>
+</ul>
+<p><strong>Calculated metrics.</strong> RPM, radar scores and expected views or revenue ranges are HanDy Analitica estimates, not YouTube data, and the website says so next to each figure.</p>
+<p><strong>How long it is kept.</strong></p>
+<ul>
+  <li>Channel data summary on the website: 28 days; it is only renewed while the YouTube permission keeps working.</li>
+  <li>Public data from other channels: 7 days on the website and never more than 27 days after it was downloaded (28 days on the computer).</li>
+  <li>Channel handbook on the website: 27 days after it was written. Texts of the AI recommendations: 25 days.</li>
+  <li>Sign-in and upload log: 90 days. Open sessions: 30 days. Failed sign-in attempts: 1 day. Website technical logs: 7 days.</li>
+  <li>Automatic backups of the website's database: 30 days at most, and they contain no YouTube data.</li>
+</ul>
+<p><strong>Deleting data or revoking access.</strong></p>
+<ul>
+  <li>The owner can press «Borrar todos los datos del canal» on the website: the website deletes it immediately and the manager's computer on its next daily run (within 7 days at most), and the YouTube permission is revoked.</li>
+  <li>You can also revoke access at any time at <a href="https://myaccount.google.com/connections">https://myaccount.google.com/connections</a>. If the permission stops working, the website and the computer delete the channel data within 27 days at most (always before 30).</li>
+</ul>
+<p><strong>Contact.</strong> For any question or request about this data, open an issue at <a href="https://github.com/angelarias0416-collab/handy-analitica/issues">https://github.com/angelarias0416-collab/handy-analitica/issues</a> (it is public: do not post private data there). The channel owner can also request deletion from the website itself, as explained above.</p>
 <p>This tool uses YouTube API Services. By using it you agree to the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>, and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> applies.</p>
 
 <h2 id="terminos">Condiciones de uso · Terms of use</h2>
